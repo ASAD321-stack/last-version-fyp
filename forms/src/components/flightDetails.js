@@ -9,10 +9,10 @@ import HomePage from "./home"
 // import PersonIcon from '@material-ui/icons/Person';
 // import PhoneIcon from '@material-ui/icons/Phone';
 
-const RideDetails = () => {
+const FlightDetails = () => {
     const navigate = useNavigate();
     const [user, setUser] = useState({
-         departure: "", destination: "", date: "", time: "", number: "", flightNo: "", meetupPoint: "", charges: ""
+        departure: "", destination: "", date: "", time: "", number: "", flightNo: "", meetupPoint: "", charges: ""
     });
     let name, value;
     const handleInputs = (e) => {
@@ -50,14 +50,14 @@ const RideDetails = () => {
     });
     const PostData = async (e) => {
         e.preventDefault();
-        const {  departure, destination, date, time, number, flightNo, meetupPoint, charges } = user;
+        const { departure, destination, date, time, number, flightNo, meetupPoint, charges } = user;
         const res = await fetch('/rideDetails', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                 departure, destination, date, time, number, flightNo, meetupPoint, charges
+                departure, destination, date, time, number, flightNo, meetupPoint, charges
 
             })
         });
@@ -75,7 +75,7 @@ const RideDetails = () => {
 
     return (
         <div className="header">
-        <HomePage/>
+            <HomePage />
 
             <div className=" body d-flex justify-content-center  align-content-center h-100">
                 <div className="card card-upload" >
@@ -86,8 +86,8 @@ const RideDetails = () => {
                         <form method="POST">
                             <div className="feilds">
                                 <div className="input-group form-group">
-                             
-                                    <select name = "departure"  className="form-control"  placeholder="Departure" value={user.departure} onChange={handleInputs}>
+
+                                    <select name="departure" className="form-control" placeholder="Departure" value={user.departure} onChange={handleInputs}>
                                         <option value="">From</option>
                                         <option value="Pakistan">Pakistan</option>
                                         <option value="India">India</option>
@@ -110,7 +110,7 @@ const RideDetails = () => {
                                         value={user.destination}
                                         onChange={handleInputs}
                                         placeholder="Destination"></input> */}
-                                  <select  name="destination" placeholder="destination" className="form-control" id="destination" value={user.destination} onChange={handleInputs}>
+                                    <select name="destination" placeholder="destination" className="form-control" id="destination" value={user.destination} onChange={handleInputs}>
                                         <option value="">To</option>
                                         <option value="Pakistan">Pakistan</option>
                                         <option value="India">India</option>
@@ -128,7 +128,7 @@ const RideDetails = () => {
                                     <div className="input-group-prepend">
                                         {/* <span className="input-group-text"><VpnKeyIcon /></span> */}
                                     </div>
-                                    <input type="date" name="date"  id="date" className="form-control" required
+                                    <input type="date" name="date" id="date" className="form-control" required
                                         value={user.date}
                                         onChange={handleInputs}
                                         placeholder="date"></input>
@@ -208,4 +208,4 @@ const RideDetails = () => {
 }
 
 
-export default RideDetails;
+export default FlightDetails;

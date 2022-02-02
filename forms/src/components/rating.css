@@ -1,30 +1,27 @@
-  /* .rating_text{
+   .rating_text{
       margin-top: 38px;
   }
-  
-.col-md-4{
-    width: 15rem;
-} */
-.ratingtext{
+*/
+ .ratingtext{
     display: block;
    margin-left: auto;
    margin-right: auto;
 }
 .dark {
     background-color: #000000;
-}
+} */
 
 
 .card text-center{
   margin-left: auto;
   margin-right: auto;
-}
+} */
 
-*{
+ *{
   margin: 0;
   padding: 0;
-}
-.rate {
+} 
+ .rate {
   display: inline-block;
   height: 46px;
   padding: 0 10px;
@@ -62,25 +59,26 @@
 
 /* Modified from: https://github.com/mukulkant/Star-rating-using-pure-css */
   .rating-card{
-  padding:10px;
-  background-color:#F5F5F5;
-  width:70%;
-  border-radius:10px;
+  padding:100px;
+  background-color: #499d3a2c;
+  width:40%;
   text-align: center;
   margin: 0 auto;
-  margin-top:30px;
-  box-shadow: 2px 2px 18px -2px #337AB7;
+  margin-top:30px; 
+   box-shadow: 20px 10px  #499D3A; 
   }
   .fa-star,.fa-star-o{
   color:orange;
+  font-size: larger;
   }
   .rating-card h1{
-  color:#337AB7;
+  color: #499D3A;
   margin-bottom:30px;
   }
   .rating{
   width: 50%;
-  float:left;
+  margin-left: 100px;
+  
   }
   .rating p{
   margin-top:10px;
@@ -96,41 +94,16 @@
   text-align: left;
   float:right;
   }
-  .rating-right-part{
-  margin-bottom:3px;
-  }
+  /* .rating-right-part{
+  margin-bottom:5px;
+  } */
   .rating-right-part p{
   margin:0px;
+  font-weight: 500;
   }
-  .progress,.progress-2,.progress-3,.progress-4,.progress-5{
-  background:#c2c2c2;
-  border-radius: 13px;
-  height:18px;
-  width:70%;
-  padding:3px;
-  margin:-20px 0px 0px 50px;
-  display: block;
-  }
-  .progress:after,.progress-2:after,.progress-3:after,.progress-4:after,.progress-5:after{
-  content: '';
-  display: block;
-  background: #337AB7;
-  width:80%;
-  height: 100%;
-  border-radius: 9px;
-  }
-  .progress-2:after{
-  width: 60%;
-  }
-  .progress-3:after{
-  width:40%;
-  }
-  .progress-4:after{
-  width:20%;
-  }
-  .progress-5:after{
-  width:10%;
-  }
+
+  
+ 
   @media (min-width:320px) and (max-width:640px){
   .rating{
   width: 100%;
@@ -147,3 +120,145 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);  
   }
+
+
+
+
+
+.progress {
+    width: 150px;
+    height: 150px !important;
+    float: left;
+    line-height: 150px;
+    background: none;
+    margin: 20px;
+    box-shadow: none;
+    position: relative
+}
+
+.progress:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 12px solid #fff;
+    position: absolute;
+    top: 0;
+}
+
+.progress>span {
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 1
+}
+
+.progress .progress-left {
+    left: 0
+}
+
+.progress .progress-bar {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-width: 12px;
+    border-style: solid;
+    position: absolute;
+    top: 0
+}
+
+.progress .progress-left .progress-bar {
+    left: 100%;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-left: 0;
+    -webkit-transform-origin: center left;
+    transform-origin: center left
+}
+
+.progress .progress-right {
+    right: 0
+}
+
+.progress .progress-right .progress-bar {
+    left: -100%;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-right: 0;
+    -webkit-transform-origin: center right;
+    transform-origin: center right;
+    animation: loading-1 1.8s linear forwards
+}
+
+.progress .progress-value {
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background: #000;
+    font-size: 24px;
+    color: #fff;
+    line-height: 135px;
+    text-align: center;
+    position: absolute;
+    top: 5%;
+    left: 5%
+}
+
+.progress.blue .progress-bar {
+    border-color: #049dff
+}
+
+
+.progress.blue .progress-left .progress-bar {
+    animation: loading-2 1.5s linear forwards 1.8s
+}
+
+.progress.yellow .progress-bar {
+    border-color: #fdba04
+}
+
+.progress.yellow .progress-right .progress-bar {
+    animation: loading-3 1.8s linear forwards
+}
+
+.progress.yellow .progress-left .progress-bar {
+    animation: none
+}
+
+@keyframes loading-1 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg)
+    }
+}
+
+@keyframes loading-2 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(144deg);
+        transform: rotate(144deg)
+    }
+}
+
+@keyframes loading-3 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    100% {
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg)
+    }
+}

@@ -49,7 +49,7 @@ const SendRequest = () => {
                     return item._id !== id;
                 })
             )
-           
+
         })
         window.location.reload(false);
     }
@@ -64,16 +64,16 @@ const SendRequest = () => {
                 <div className="row text-center">
 
                     {ads.map((element) =>
-                        <div className="col-12 col-md-4 mt-5" key={element.id}>
+                        <div className="col-md-4 mt-5 mb-5" key={element.id}>
                             <div className="card-login">
                                 <div className="d-flex align-items-center">
                                     <div className="box ml-3 w-100">
-                                    <img className="adsImage" src={PF + element.image} onError={({ currentTarget }) => {
-                                                    currentTarget.onerror = null; // prevents looping
-                                                    currentTarget.src = "https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png"
-                                                }} width="80" height="80" />
+                                        <img className="adsImage" src={PF + element.image} onError={({ currentTarget }) => {
+                                            currentTarget.onerror = null; // prevents looping
+                                            currentTarget.src = "https://www.seekpng.com/png/detail/966-9665317_placeholder-image-person-jpg.png"
+                                        }} width="80" height="80" />
                                         <h4 className="">{element.loginName}</h4>
-                                        <h3 className="trainer-name-title">{element.name}&ensp;<StarOutlineIcon/>{element.rating}</h3>
+                                        <h3 className="trainer-name-title">{element.name}&ensp;<StarOutlineIcon />{element.rating}</h3>
                                         <div className="origin">
                                             <div> <span>departure:</span><span className="origin1">{element.departure}</span> </div>
                                             <div> <span >Destination:</span> <span className="destination1">{element.destination}</span> </div>
@@ -84,8 +84,8 @@ const SendRequest = () => {
                                             <div> <span>Time:</span> <span className="destination1">{element.time}</span> </div>
                                         </div>
                                         <button className="btn btn-sm btn-success w-100 ml-2" onClick={() => {
-                                    navigate("/rating/" + element.loginId )
-                                }}>Give Rating</button>
+                                            navigate("/rating/" + element.loginId)
+                                        }}>Give Rating</button>
                                     </div>
                                 </div>
                             </div>
@@ -93,7 +93,7 @@ const SendRequest = () => {
 
                             {element.requests.map((c, i) => (
 
-                                <div className="col-12 col-md-4 mt-5" key={i}>
+                                <div className="mt-5 mb-5" key={i}>
                                     <div className="card-login">
                                         <div className="d-flex align-items-center">
                                             <div className="box ml-3 w-100">
@@ -109,7 +109,7 @@ const SendRequest = () => {
                                                 <hr class="dashed"></hr>
                                                 <div className="origin">
 
-                                                   
+
                                                     <button className="btn btn-sm btn-success w-100 ml-2" onClick={() => {
                                                         deleteRide(c._id);
                                                     }}>Cancel</button>

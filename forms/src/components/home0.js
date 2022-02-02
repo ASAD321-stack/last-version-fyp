@@ -47,27 +47,27 @@ const Home0 = () => {
 
     return (
         <div>
-     
+
             <nav style={{ "height": "70px" }} class="navbar navbar-expand-lg navbar-light ">
-                <Link className="navbar-brand"  style={{ "color": "white" ,"fontSize":"30px"}} to="/">Farrgo!</Link>
+                <Link className="navbar-brand" style={{ "color": "white", "fontSize": "30px" }} to="/">Faargo!</Link>
                 <button style={{ "backgroundColor": "white" }} className=" navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span  style={{ "backgroundColor": "white" }} className="navbar-toggler-icon"></span>
+                    <span style={{ "backgroundColor": "white" }} className="navbar-toggler-icon"></span>
                 </button>
-                <div className="collapse navbar-collapse  "  id="navbarNav">
+                <div className="collapse navbar-collapse  " id="navbarNav">
                     <ul className="navbar-nav">
-              
+
                         <li className="nav-item">
-                            <Link className="btn" style={{ "color": "green", "backgroundColor": "white","fontSize":"18px"}} to="/login" >Login</Link>
+                            <Link className="btn" style={{ "color": "green", "backgroundColor": "white", "fontSize": "18px" }} to="/login" >Login</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="btn" style={{ "color": "black", "backgroundColor": "#C3E2F5","fontSize":"18px"}} to="/SignUp" >SignUp</Link>
+                            <Link className="btn" style={{ "color": "black", "backgroundColor": "#C3E2F5", "fontSize": "18px" }} to="/SignUp" >SignUp</Link>
                         </li>
-                       
-                        
+
+
                     </ul>
                 </div>
             </nav>
-            
+
 
         </div>
     );
